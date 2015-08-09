@@ -2,31 +2,107 @@ Please answer the below core-java Questions:
 
 
 What jdk contains or composed of and define each components?
+Ans:JDK---->JVM(Java Virtual Machine+ JRE(Java Runtime Environment)
+
 What is IDE?
+Ans:Integrated Development Environment.
+
 What are the IDEs available in the market to support java?
+Ans: Eclipse, Intellji
+
 Explain the entire java life cycle.
+Souce Code written on notepad or eclipse or other IDE---->by code of source code by javac(A.java will be A.class)---->JVM loader load
+---->verify the code---->Execute the code by JVM---->Operating System;
+
 what is class?
+Ans: A class is a blue print of a object
 What is object?
+Ans:An Object is an instance of a class
+
 What is the entry point of an application?
+public static void main(String[] args)
+
 Why main is static?
+This is the entry point of application and there is no need to constructor to traverse main method;
+
 What is the difference between an Interface and Abstract class?
+Ans: 1. Interface is not class whether Abstract class is a class
+     2. Interface has method definition only no implementation.whether Abstraction has abstract method or non abstract method;
+     3. To access Interface , needs implements key word whether abstract class should be extender to other.
+
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+Ans: No,by implements and extending to other class and make and object to that class.
+
 what is Access Specifier?
-What is OOP ? Define each feature of java OOP.
+Ans: To get permission of access,eg--public, private, protected
+
+What is OOP ? Define each feature of java OOP
+OOP means Object Oriented Programming,
+Feature:1. It is object oriented programming
+        2. platform independent
+        3. Secured designing
+        4. Open Source
+.
 What is API? Name list of API that you have used so far.
+Ans: Application Program Interface. 
+Java.lang, java.util, java.math
+
 Does java support multiple inheritance?
+Ans: Yes 
+
 What is method overloading and when it happens?
+Ans:If a class has different method in same name but different signature.
+
 What is method overriding and when it happens?
+Ans: When a method is modified or implement from other class which is same name that is called overridding
+
 Explain exceptions in java and how to handle it.
+Ans:When Java source code not working the exception is happened, java handle exception by exception handling feature;
+    try{}catch(){}
+
 What is static keyword in java? How it has been used in variables and methods ?
+Ans:static keyword are used in java mainly for memory menagement;
+ private static int VarMemory;
+ public static void MethMemory()
+ {
+ 
+ }
+
 What is final and how it has been used variables and methods?
+final key word is used in java for assigning constant value; it will not be changed.
+
+final pi=3.14;
+final MethodExample()
+{
+}
+
 What is final, finally and finalize?
+
+final can be used to mark a variable "unchangeable"
+finally using to try/catch statement and execute code;
+finalize is called when an object is garbage collected.
+
 What is a constructor ?
+Constructor is used for object initialization;
+
+
 What is "this" keyword in java ?
+When same name one variable is comes as argument then this is used to differentiate instance variable and receiving arguments.
+
 What is "super" keyword in java?
-What is JVM stand for ?
+When a class extend or impelments any class to differentiate  variable and method super key word is used.
+
+What is JVM stand for ? 
+Java Virtual Machine
 What version of java are you using?
+java 1.8
 What is JAR stand for ?
+Java Archive
 What is compile time and run time?
+the time need to convert source code to machine code is compile time
+the time need to execute the program is called run time;
 What is heap?
+heap is portion of memory where java object are occupied;
+
 How java manage it's memory?
+Code segment+stack+heap 
