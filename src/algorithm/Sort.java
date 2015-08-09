@@ -27,6 +27,7 @@ public class Sort {
      
  public int [] mergeSort(int [] array){
         int [] list = array;
+<<<<<<< HEAD
         int size=list.length;
         if(size<2)
           return list;
@@ -106,6 +107,8 @@ public class Sort {
   /*  
     public int[] insertionSort(int [] array){
         int [] list = array;
+=======
+>>>>>>> 5575958255a7c9374a3ec5dc1a3c20d26897b4e3
         for(int i=1;i<list.length;i++)
         {
             int temp= list[i];
@@ -149,6 +152,59 @@ public class Sort {
     }
     
 
+<<<<<<< HEAD
+=======
+    public int [] mergeSort(int [] array){
+        int [] list = array;
+        int size=list.length;
+        if(size<2)
+          return list;
+        int middle=size/2;
+        int leftSize=middle;
+        int rightSize=size-middle;
+        
+        int[] left= new int[leftSize];
+        int[] right= new int[rightSize];
+        
+        for(int m=0;m<middle;m++)
+        {
+          left[m]=list[m];
+        }
+        
+        for(int n=middle;n < size;n++)
+        {
+           right[n-middle]=list[n];
+        }
+        
+        mergeSort(left);
+        mergeSort(right);
+        merge(left,right,list);
+        
+        public static void merge (int[] left, int[] right,int[] list )
+        {
+           int i=0;
+           int j=0;
+           int k=0;
+           
+           int leftSize=left.length;
+           int rightSize=rigth.length;
+           
+           While(i < leftSize && j< leftSize)
+           {
+        	    if(lef[i]) <= right[j])
+
+           }
+           
+           
+           
+        }
+        
+        
+        
+
+        return list;
+    }
+>>>>>>> 5575958255a7c9374a3ec5dc1a3c20d26897b4e3
     
 
     public int [] quickSort(int [] array){

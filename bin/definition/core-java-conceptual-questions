@@ -2,7 +2,11 @@ Please answer the below core-java Questions:
 
 
 What jdk contains or composed of and define each components?
+<<<<<<< HEAD
 Ans:JDK---->JVM(Java Virtual Machine+ JRE(Java Runtime Environment)
+=======
+Ans:
+>>>>>>> 5575958255a7c9374a3ec5dc1a3c20d26897b4e3
 
 What is IDE?
 Ans:Integrated Development Environment.
