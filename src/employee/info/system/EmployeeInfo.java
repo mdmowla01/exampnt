@@ -1,6 +1,6 @@
 package employee.info.system;
 
-public class EmployeeInfo  implements Employee{
+public class EmployeeInfo extends EmployeeAbstract implements Employee{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -16,15 +16,19 @@ public class EmployeeInfo  implements Employee{
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName="PeopleNTech";
-	final double increment=0.5;
+	final int increment=50000;
 	
 	
 	private int employeeID;
 	private String name;
 	private int salary;
-	private int basicsalary;
-	private int otherssalary;
-	private int benifit;
+	private int jobsyear;
+	private int monthlySalary;
+	private String performance;
+	
+	private int pension;
+	
+	
 	
 	private String department;
 	
@@ -45,8 +49,18 @@ public class EmployeeInfo  implements Employee{
 		this.employeeID=employeeID;
 	   }*/
 	
-    
+	 
+	 public EmployeeInfo(int monthlySalary, String performance,int jobsyear){
+		    super(monthlySalary,performance);
+		    this.monthlySalary=monthlySalary;
+		    this.performance=performance;
+		    this.jobsyear=jobsyear;
+		    
+		    
+		 }
+	 	 
 	public EmployeeInfo(String name, int employeeID, String department){
+	    super();
 		this.name=name;
 		this.employeeID=employeeID;
 		
@@ -85,7 +99,9 @@ public class EmployeeInfo  implements Employee{
 	    //Overridden
 		public int calculateSalary()
 		{
-			salary=basicsalary+otherssalary;
+			
+			
+			salary=monthlySalary*12;
 			return salary;
 		}
 		
@@ -93,16 +109,12 @@ public class EmployeeInfo  implements Employee{
 		//overridden
 		public void benefitLayout()
 		{
-			benifit=(int) (basicsalary *.01);
+			System.out.println("Benefit Layout:");
+			
 		}
 		
+				
 		
-		
-		public int CalculateOtherIncome()
-		{
-		   
-		}
-	
 		
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
@@ -112,10 +124,12 @@ public class EmployeeInfo  implements Employee{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeBonus(){
+	/*public static int calculateEmployeBonus(int monthlySalary, String performance){
+		
+		totalSalary=montlySalary*12;
 		int total=0;
 		return total;
-	}
+	}*/
 	
 	/*
 	 * This methods should calculate Employee Pension based on salary and numbers of years with the company.
@@ -124,9 +138,26 @@ public class EmployeeInfo  implements Employee{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployePension(){
-		int total=0;
-		return total;
+	public int calculateEmployepension(){
+		pension=0;
+		if(jobsyear==1)
+		{
+			pension=(int) (monthlySalary * .05);
+		}
+		if(jobsyear==2)
+		{
+			pension=(int) (monthlySalary * .10);
+		}
+		else
+			pension=(int) (monthlySalary * .20);
+						  
+		return pension;
+	}
+	
+	public void comparison()
+	{
+	   
+		System.out.println("Increment: "+increment);
 	}
 	
 	

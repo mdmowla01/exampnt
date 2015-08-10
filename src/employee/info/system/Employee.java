@@ -23,6 +23,6 @@ public interface Employee {
 	//employee benefit
 	public void benefitLayout();
 	
-	public int CalculateOtherIncome();
+	
 
 }

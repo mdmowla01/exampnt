@@ -25,17 +25,34 @@ public class CnnEmployee {
 		System.out.println(id);
 		System.out.println(id1);*/
 		
-		EmployeeInfo abs= new EmployeeInfo("Md.Taherul Mowla",208496,"Software Department");
+		EmployeeInfo emp= new EmployeeInfo("Md.Taherul Mowla",208496,"Software Department");
 		
-		System.out.println("Employees Name: "+abs.employeeName());
-		abs.assignDepartment();
-		System.out.println("Employees ID: "+abs.employeeId());
+		// Polymorphism concept
+		
+		EmployeeAbstract abs= new EmployeeInfo(10000,"best",2);
+		EmployeeInfo emp1 =new EmployeeInfo(10000,"best",2);
+		
+		System.out.println("Employees Name: "+emp.employeeName());
+		emp.assignDepartment();
+		System.out.println("Employees ID: "+emp.employeeId());
 		System.out.println("Company Name: "+EmployeeInfo.companyName);
 		System.out.println("Salary Sheet");
 		System.out.println("==============");
 		
 		
+		System.out.println("Yearly Salary: $"+ emp1.calculateSalary());
 		
+		emp.benefitLayout();
+			
+		
+		int result = abs.calculateEmployeBonus();
+		System.out.println("Yearly Bonus: "+result);
+		
+		int pension = emp1.calculateEmployepension();
+		System.out.println("Yearly Pension: "+pension);
+		
+		abs.comparison();
+		EmployeeAbstract.motivation();
 		
 
 	}
