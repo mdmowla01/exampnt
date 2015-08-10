@@ -14,7 +14,7 @@ public class DataReader {
 		 * Use try....catch block to handle Exception.
 		 */
 
-		String textFile = "/ExamJuly2015/src/data/becoming-a-developer.txt";
+		String textFile = "/SuperSonic/src/data/becoming-a-developer.txt";
 		
 		//Mowla's Code
 		

@@ -1,6 +1,6 @@
 package employee.info.system;
 
-public class EmployeeInfo{
+public class EmployeeInfo  implements Employee{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -15,7 +15,18 @@ public class EmployeeInfo{
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
-	static String companyName;
+	static String companyName="PeopleNTech";
+	final double increment=0.5;
+	
+	
+	private int employeeID;
+	private String name;
+	private int salary;
+	private int basicsalary;
+	private int otherssalary;
+	private int benifit;
+	
+	private String department;
 	
 	/*
 	 * You must implement the logic for below 2 methods and 
@@ -27,13 +38,72 @@ public class EmployeeInfo{
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
-	public EmployeeInfo(int employeeId){
+	
+	//Concrete Class Constructor
+	 /*  public EmployeeInfo(int employeeID){
 		
-	}
-    public EmployeeInfo(String name, int employeeId){
+		this.employeeID=employeeID;
+	   }*/
+	
+    
+	public EmployeeInfo(String name, int employeeID, String department){
+		this.name=name;
+		this.employeeID=employeeID;
+		
+		this.department=department;
+		System.out.println("This is from Concrete class");
+		
 		
 	}
 	
+	// Implements all the declared method of interface and overridden concept
+	
+	   //employeeId() will return employee id.
+	   //overridden
+		
+	    public  int employeeId()
+		{
+	    	return employeeID;
+		}
+		
+		//employeeName() will return employee name
+	    //Overridden
+		public String employeeName()
+		{
+		  return name;
+			
+		}
+		
+		//assignDepartment() will assign employee to departments
+		//Overridden
+	    public void assignDepartment()
+	    {
+	       System.out.println("Employee's Department: " +department);
+	    }
+		
+		//calculate employee salary
+	    //Overridden
+		public int calculateSalary()
+		{
+			salary=basicsalary+otherssalary;
+			return salary;
+		}
+		
+		//employee benefit
+		//overridden
+		public void benefitLayout()
+		{
+			benifit=(int) (basicsalary *.01);
+		}
+		
+		
+		
+		public int CalculateOtherIncome()
+		{
+		   
+		}
+	
+		
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -58,4 +128,6 @@ public class EmployeeInfo{
 		int total=0;
 		return total;
 	}
+	
+	
 }

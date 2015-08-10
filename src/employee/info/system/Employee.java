@@ -9,7 +9,7 @@ public interface Employee {
 	//and then implement these in a concrete class.
 	
 	//employeeId() will return employee id.
-	public int employeeId();
+	public  int employeeId();
 	
 	//employeeName() will return employee name
 	public String employeeName();
@@ -23,6 +23,6 @@ public interface Employee {
 	//employee benefit
 	public void benefitLayout();
 	
-	
+	public int CalculateOtherIncome();
 
 }

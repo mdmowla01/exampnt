@@ -13,8 +13,26 @@ public class CnnEmployee {
 	 **/
 	public static void main(String[] args) {
 		
+	/*	
+		EmployeeInfo emp= new EmployeeInfo("Masud",10,"Address");
+		emp.assignDepartment();
+		emp.benefitLayout();
+		emp.employeeId();
 		
+		Employee emp1=new EmployeeInfo("Masud",10,"Address");
+		int id=emp1.employeeId();
+		int id1=emp.employeeId();
+		System.out.println(id);
+		System.out.println(id1);*/
 		
+		EmployeeInfo abs= new EmployeeInfo("Md.Taherul Mowla",208496,"Software Department");
+		
+		System.out.println("Employees Name: "+abs.employeeName());
+		abs.assignDepartment();
+		System.out.println("Employees ID: "+abs.employeeId());
+		System.out.println("Company Name: "+EmployeeInfo.companyName);
+		System.out.println("Salary Sheet");
+		System.out.println("==============");
 		
 		
 		
